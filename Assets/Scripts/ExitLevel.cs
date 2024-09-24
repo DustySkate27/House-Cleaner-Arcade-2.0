@@ -32,7 +32,7 @@ public class ExitLevel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Jugador") && hecho == true)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("Win");
         }
     }
 }

@@ -21,11 +21,14 @@ public class controles : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cantidadTexto;
     private int percent;
 
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         cantidadInicial = GameObject.FindGameObjectsWithTag("Mugre");
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         velocidad.x = 10;
         velocidad.y = 10;
     }
@@ -33,6 +36,8 @@ public class controles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animations();
+
         if (Input.GetKeyDown("w"))
         {
             rb.AddForce(Vector3.up * velocidad.y, ForceMode2D.Impulse);
@@ -80,6 +85,29 @@ public class controles : MonoBehaviour
 
         cleanPorcent();
 
+    }
+
+    private void animations()
+    {
+        if (rb.velocity.y > 0)
+            animator.SetBool("IsUp",true);
+        else
+            animator.SetBool("IsUp", false);
+
+        if (rb.velocity.y < 0)
+            animator.SetBool("IsDown", true);
+        else
+            animator.SetBool("IsDown", false);
+
+        if (rb.velocity.x > 0)
+            animator.SetBool("IsRight", true);
+        else
+            animator.SetBool("IsRight", false);
+
+        if (rb.velocity.x < 0)
+            animator.SetBool("IsLeft", true);
+        else
+            animator.SetBool("IsLeft", false);
     }
 
     public void cleanPorcent()

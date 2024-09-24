@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6373220740818703639}
   - component: {fileID: -1624436333992661231}
   - component: {fileID: 2997366807898648002}
+  - component: {fileID: 2813874043342018817}
   m_Layer: 0
   m_Name: escoba
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 8981670710659820517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.656, y: -0.309, z: 0}
-  m_LocalScale: {x: 0.4185156, y: 0.4918851, z: 2.8655}
+  m_LocalPosition: {x: -0.3279, y: 4.9231, z: 0}
+  m_LocalScale: {x: 5.3374877, y: 6.2731967, z: 36.544804}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 9f2c314ec4ca71a46aa57a9c7c9e4f1b, type: 3}
+  m_Sprite: {fileID: 1747391133, guid: e51229377d4d4964296d94c6dadd0cac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,18 +119,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.046857357, y: -5.4618673}
+  m_Offset: {x: 0.0016426593, y: -0.62807834}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 19.2}
+    oldSize: {x: 0.54, y: 1.8100001}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.6115294, y: 8.276266}
+  m_Size: {x: 0.5657618, y: 0.58082926}
   m_EdgeRadius: 0
 --- !u!114 &2997366807898648002
 MonoBehaviour:
@@ -147,3 +148,24 @@ MonoBehaviour:
   tiempoActual: 0
   tiempoDeVida: 1
   tareaHecha: 1
+--- !u!95 &2813874043342018817
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981670710659820517}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 45b7f2b04d4157d448a78072ad21bfef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
