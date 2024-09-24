@@ -41,6 +41,7 @@ public class controles : MonoBehaviour
         if (Input.GetKeyDown("w"))
         {
             rb.AddForce(Vector3.up * velocidad.y, ForceMode2D.Impulse);
+            Debug.Log("gO UP, bby");
         }
 
         if (Input.GetKeyDown("s"))
