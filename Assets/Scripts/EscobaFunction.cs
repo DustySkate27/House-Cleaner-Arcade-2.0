@@ -13,9 +13,12 @@ public class EscobaFunction : MonoBehaviour
 
     public int tareaHecha = 1;
 
+    private controles updateDirt;
+
     // Start is called before the first frame update
     void Start()
     {
+        updateDirt = GameObject.FindGameObjectWithTag("Jugador").GetComponent<controles>();
         puerta = GameObject.FindGameObjectWithTag("Puerta");
         player = GameObject.FindGameObjectWithTag("Jugador");
     }
@@ -36,6 +39,7 @@ public class EscobaFunction : MonoBehaviour
         if (collision.gameObject.CompareTag("Mugre"))
         {
             collision.GetComponent<vidaMugre>().tomarDanio(danio);
+            updateDirt.updateDirt(collision.gameObject);
             puerta.GetComponent<ExitLevel>().juntarTareas();
         }
     }

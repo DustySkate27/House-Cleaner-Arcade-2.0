@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class controles : MonoBehaviour
@@ -10,27 +11,28 @@ public class controles : MonoBehaviour
     [SerializeField] public Transform spawnLeft;
     [SerializeField] public Transform spawnRight;
     [SerializeField] public GameObject escoba;
-    [SerializeField] private bool escAct=false;
+    [SerializeField] private bool escAct = false;
     [SerializeField] private bool check = false;
     [SerializeField] public Vector2 velocidad;
 
     private Rigidbody2D rb;
 
-    private GameObject[] cantidad;
-    private GameObject[] cantidadInicial;
+    [SerializeField] private List<GameObject> cantidad = new List<GameObject>();
+    private float cantidadInicial;
     [SerializeField] private TextMeshProUGUI cantidadTexto;
-    private int percent;
+    private float percent;
 
     private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        cantidadInicial = GameObject.FindGameObjectsWithTag("Mugre");
+        cantidadInicial = cantidad.Count;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         velocidad.x = 10;
         velocidad.y = 10;
+        updateDirt(null);
     }
 
     // Update is called once per frame
@@ -41,7 +43,6 @@ public class controles : MonoBehaviour
         if (Input.GetKeyDown("w"))
         {
             rb.AddForce(Vector3.up * velocidad.y, ForceMode2D.Impulse);
-            Debug.Log("gO UP, bby");
         }
 
         if (Input.GetKeyDown("s"))
@@ -84,7 +85,7 @@ public class controles : MonoBehaviour
             checkEscoba(check);
         }
 
-        cleanPorcent();
+        
 
     }
 
@@ -111,11 +112,17 @@ public class controles : MonoBehaviour
             animator.SetBool("IsLeft", false);
     }
 
-    public void cleanPorcent()
+    public void updateDirt(GameObject deleted)
     {
-        cantidad = GameObject.FindGameObjectsWithTag("Mugre");
+        cantidad.Remove(deleted);
 
-        percent = cantidad.Length/cantidadInicial.Length*100; 
+        if (cantidad.Count == 0)
+        {
+            cantidadTexto.text = "Dirt: 0%";
+            return;
+        }
+
+        percent = cantidad.Count/cantidadInicial*100;
 
         cantidadTexto.text = "Dirt: " + percent.ToString() + "%";
     }
