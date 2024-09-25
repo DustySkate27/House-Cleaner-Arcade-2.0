@@ -4,10 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ExitLevel : MonoBehaviour
-{
-    [SerializeField] public int tareasHacer;
-    [SerializeField] public int tareas;
+{ 
     private bool hecho = false;
+    Animator animator;
 
     private void Start()
     {
@@ -17,15 +16,12 @@ public class ExitLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(tareas >= tareasHacer)
-        {
-            hecho = true;
-        }
+        
     }
     
-    public void juntarTareas()
+    public void openDoor(bool act)
     {
-        tareas++;
+        hecho = act;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

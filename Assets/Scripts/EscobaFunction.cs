@@ -40,7 +40,6 @@ public class EscobaFunction : MonoBehaviour
         {
             collision.GetComponent<vidaMugre>().tomarDanio(danio);
             updateDirt.updateDirt(collision.gameObject);
-            puerta.GetComponent<ExitLevel>().juntarTareas();
         }
     }
 }

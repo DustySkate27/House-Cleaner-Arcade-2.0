@@ -21,75 +21,37 @@ public class controles : MonoBehaviour
     private float cantidadInicial;
     [SerializeField] private TextMeshProUGUI cantidadTexto;
     private float percent;
+    private ExitLevel doorCheck;
+
 
     private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        cantidadInicial = cantidad.Count;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
         velocidad.x = 10;
         velocidad.y = 10;
-        updateDirt(null);
+
+        cantidadInicial = cantidad.Count; //Keeps the first number of the amount of Dirt in the level.
+        updateDirt(null); //Starts the DirtPercent without removing anything.
+        doorCheck = GameObject.FindGameObjectWithTag("Puerta").GetComponent<ExitLevel>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        animations();
+        animations(); //Movement animations.
 
-        if (Input.GetKeyDown("w"))
-        {
-            rb.AddForce(Vector3.up * velocidad.y, ForceMode2D.Impulse);
-        }
+        movement(); //Movement of the playe, through Addforce(Impulse).
 
-        if (Input.GetKeyDown("s"))
-        {
-            rb.AddForce(Vector3.down * velocidad.y, ForceMode2D.Impulse);
-        }
-
-        if (Input.GetKeyDown("d"))
-        {
-            rb.AddForce(Vector3.right * velocidad.x, ForceMode2D.Impulse);
-        }
-
-        if (Input.GetKeyDown("a"))
-        {
-            rb.AddForce(Vector3.left * velocidad.x, ForceMode2D.Impulse);
-        }
-
-        if (Input.GetKeyDown("p") && rb.velocity.y > 0 && escAct == false)
-        {
-            Instantiate(escoba, spawnUp);
-            escAct = true;
-            checkEscoba(check);
-        }
-        if (Input.GetKeyDown("p") && rb.velocity.y < 0 && escAct == false)
-        {
-            Instantiate(escoba, spawnDown);
-            escAct = true;
-            checkEscoba(check);
-        }
-        if (Input.GetKeyDown("p") && rb.velocity.x > 0 && escAct == false)
-        {
-            Instantiate(escoba, spawnRight);
-            escAct = true;
-            checkEscoba(check);
-        }
-        if (Input.GetKeyDown("p") && rb.velocity.x < 0 && escAct == false)
-        {
-            Instantiate(escoba, spawnLeft); 
-            escAct = true;
-            checkEscoba(check);
-        }
-
-        
+        broom(); //Instantiates the broom in the direction the player is moving (Speed preference).
 
     }
 
-    private void animations()
+    private void animations() 
     {
         if (rb.velocity.y > 0)
             animator.SetBool("IsUp",true);
@@ -112,13 +74,68 @@ public class controles : MonoBehaviour
             animator.SetBool("IsLeft", false);
     }
 
-    public void updateDirt(GameObject deleted)
+    private void movement()
+    {
+        if (Input.GetKeyDown("w"))
+        {
+            rb.AddForce(Vector3.up * velocidad.y, ForceMode2D.Impulse);
+        }
+
+        if (Input.GetKeyDown("s"))
+        {
+            rb.AddForce(Vector3.down * velocidad.y, ForceMode2D.Impulse);
+        }
+
+        if (Input.GetKeyDown("d"))
+        {
+            rb.AddForce(Vector3.right * velocidad.x, ForceMode2D.Impulse);
+        }
+
+        if (Input.GetKeyDown("a"))
+        {
+            rb.AddForce(Vector3.left * velocidad.x, ForceMode2D.Impulse);
+        }
+    }
+
+    private void broom() //if "p" is pressed, some axe of the velocity is different from 0 and the broom isn't active, the Broom instantiates
+    {
+        
+
+        if (Input.GetKeyDown("p") && rb.velocity.y > 0 && escAct == false)
+        {
+            Instantiate(escoba, spawnUp);
+            escAct = true;
+            checkEscoba(check);
+        }
+        if (Input.GetKeyDown("p") && rb.velocity.y < 0 && escAct == false)
+        {
+            Instantiate(escoba, spawnDown);
+            escAct = true;
+            checkEscoba(check);
+        }
+        if (Input.GetKeyDown("p") && rb.velocity.x > 0 && escAct == false)
+        {
+            Instantiate(escoba, spawnRight);
+            escAct = true;
+            checkEscoba(check);
+        }
+        if (Input.GetKeyDown("p") && rb.velocity.x < 0 && escAct == false)
+        {
+            Instantiate(escoba, spawnLeft);
+            escAct = true;
+            checkEscoba(check);
+        }
+
+    }
+
+    public void updateDirt(GameObject deleted) //When the dirt is cleaned, it removes them from the list of dirt to clean. When theres no more dirt, text is "0%".
     {
         cantidad.Remove(deleted);
 
         if (cantidad.Count == 0)
         {
             cantidadTexto.text = "Dirt: 0%";
+            doorCheck.openDoor(true); //Sends a true bool, so the door opens.
             return;
         }
 
@@ -128,7 +145,7 @@ public class controles : MonoBehaviour
     }
 
 
-    public void checkEscoba(bool check)
+    public void checkEscoba(bool check) //Checks if the broom was activated and deactivates it.
     {
         if (check == true)
         {
