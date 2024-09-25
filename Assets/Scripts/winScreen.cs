@@ -14,9 +14,4 @@ public class winScreen : MonoBehaviour
         animator.SetBool("finale", true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

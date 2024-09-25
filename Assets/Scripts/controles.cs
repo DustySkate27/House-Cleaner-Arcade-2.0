@@ -141,7 +141,7 @@ public class controles : MonoBehaviour
 
         percent = cantidad.Count/cantidadInicial*100;
 
-        cantidadTexto.text = "Dirt: " + percent.ToString() + "%";
+        cantidadTexto.text = "Dirt: " + percent.ToString("F2") + "%";
     }
 
 

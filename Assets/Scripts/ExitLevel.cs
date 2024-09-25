@@ -7,17 +7,6 @@ public class ExitLevel : MonoBehaviour
 { 
     private bool hecho = false;
     Animator animator;
-
-    private void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     public void openDoor(bool act)
     {
