@@ -10,4 +10,12 @@ public class LoadGame : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+    public void volverMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void salir()
+    {
+        Application.Quit();
+    }
 }
