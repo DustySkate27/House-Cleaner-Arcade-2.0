@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ExitLevel : MonoBehaviour
-{ 
+{
+    [SerializeField] private int selecLevel;
+
     private bool hecho = false;
     Animator animator;
     
@@ -17,7 +19,7 @@ public class ExitLevel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Jugador") && hecho == true)
         {
-            SceneManager.LoadScene("Win");
+            SceneManager.LoadScene(selecLevel);
         }
     }
 }
