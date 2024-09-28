@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadGame : MonoBehaviour
 {
+    [SerializeField] private int level;
+
     public void CargarJuego()
     {
         SceneManager.LoadScene("SampleScene");
@@ -17,5 +19,9 @@ public class LoadGame : MonoBehaviour
     public void salir()
     {
         Application.Quit();
+    }
+    public void CargarNivel()
+    {
+        SceneManager.LoadScene(level);
     }
 }
