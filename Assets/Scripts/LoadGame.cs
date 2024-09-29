@@ -6,11 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadGame : MonoBehaviour
 {
-    [SerializeField] private int level;
 
     public void CargarJuego()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("nivel1");
     }
     public void volverMenu()
     {
@@ -20,8 +19,13 @@ public class LoadGame : MonoBehaviour
     {
         Application.Quit();
     }
+
     public void CargarNivel()
     {
-        SceneManager.LoadScene(level);
+        if (SceneManager.GetActiveScene().name == "win")
+        {
+            SceneManager.LoadScene("nivel2");
+        }
+
     }
 }

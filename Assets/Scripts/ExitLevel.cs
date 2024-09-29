@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class ExitLevel : MonoBehaviour
 {
 
-    [SerializeField] private int selecLevel;
-
     private bool hecho = false;
     Animator animator;
 
@@ -34,7 +32,21 @@ public class ExitLevel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Jugador") && hecho == true)
         {
-            SceneManager.LoadScene(selecLevel);
+            CargarNivel();
         }
+    }
+
+    public void CargarNivel()
+    {
+        if (SceneManager.GetActiveScene().name == "nivel1")
+        {
+            SceneManager.LoadScene("win");
+        }
+
+        if (SceneManager.GetActiveScene().name == "nivel2")
+        {
+            SceneManager.LoadScene("win2");
+        }
+
     }
 }

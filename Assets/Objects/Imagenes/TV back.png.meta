@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e3d20881f36cc3a48b6b4a3be49751a2
+guid: f91866c32a3c2164ebba9a355a278a62
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pared_0
+      name: TV back_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 330
-        width: 960
-        height: 450
+        x: 80
+        y: 140
+        width: 144
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 715ce20b00d391b4092a85b1d66ab6ae
-      internalID: 490766942
+      spriteID: cf9203d3dd246d246b4603d4a071a4f9
+      internalID: 695942245
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pared_0: 490766942
+      TV back_0: 695942245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
