@@ -7,12 +7,24 @@ public class pausaManager : MonoBehaviour
 {
     [SerializeField] private GameObject pausarPanel;
 
-    private void Start()
+
+    private void Awake()
     {
         if (SceneManager.GetActiveScene().name == "nivel1")
         {
             Time.timeScale = 0f;
+            pausarPanel.SetActive(true);
         }
+        else
+        {
+            Time.timeScale = 1f;
+            pausarPanel.SetActive(false);
+        }
+    }
+
+    private void Start()
+    {
+        
     }
 
     private void Update()
