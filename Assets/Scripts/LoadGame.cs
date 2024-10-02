@@ -26,6 +26,9 @@ public class LoadGame : MonoBehaviour
         {
             SceneManager.LoadScene("nivel2");
         }
-
+        if (SceneManager.GetActiveScene().name == "win2")
+        {
+            SceneManager.LoadScene("nivel3");
+        }
     }
 }

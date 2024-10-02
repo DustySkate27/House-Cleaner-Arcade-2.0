@@ -48,5 +48,10 @@ public class ExitLevel : MonoBehaviour
             SceneManager.LoadScene("win2");
         }
 
+        if (SceneManager.GetActiveScene().name == "nivel3")
+        {
+            SceneManager.LoadScene("win3");
+        }
+
     }
 }
