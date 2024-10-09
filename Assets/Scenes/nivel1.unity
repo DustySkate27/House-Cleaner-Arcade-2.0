@@ -4170,6 +4170,18 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.9098039
       objectReference: {fileID: 0}
+    - target: {fileID: 2350236782442622195, guid: 99e369822be56e14fa27158652b18149, type: 3}
+      propertyPath: m_text
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 2350236782442622195, guid: 99e369822be56e14fa27158652b18149, type: 3}
+      propertyPath: m_fontSize
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2350236782442622195, guid: 99e369822be56e14fa27158652b18149, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 4250900155386990383, guid: 99e369822be56e14fa27158652b18149, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -4253,6 +4265,18 @@ PrefabInstance:
     - target: {fileID: 6595998137709096472, guid: 99e369822be56e14fa27158652b18149, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591350669986399719, guid: 99e369822be56e14fa27158652b18149, type: 3}
+      propertyPath: m_text
+      value: Return to menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591350669986399719, guid: 99e369822be56e14fa27158652b18149, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591350669986399719, guid: 99e369822be56e14fa27158652b18149, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8258222411378386104, guid: 99e369822be56e14fa27158652b18149, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

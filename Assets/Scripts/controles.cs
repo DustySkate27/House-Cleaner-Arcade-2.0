@@ -95,6 +95,7 @@ public class controles : MonoBehaviour
         {
             rb.AddForce(Vector3.left * velocidad.x, ForceMode2D.Impulse);
         }
+
     }
 
     private void broom() //if "p" is pressed, some axe of the velocity is different from 0 and the broom isn't active, the Broom instantiates
