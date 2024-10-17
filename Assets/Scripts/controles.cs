@@ -137,6 +137,8 @@ public class controles : MonoBehaviour
         {
             cantidadTexto.text = "Dirt: 0%";
             doorCheck.openDoor(true); //Sends a true bool, so the door opens.
+            perfectManager.Instance.perfect = 100;
+
             return;
         }
 
