@@ -24,6 +24,17 @@ public class perfectManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Debug.Log(perfect);
+    }
+
+    private void iniciaNivel()
+    {
         if (SceneManager.GetActiveScene().name == "nivel1")
         {
             perfect = 0;
@@ -36,11 +47,8 @@ public class perfectManager : MonoBehaviour
         {
             perfect = 0;
         }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(perfect);
-    }
+
 }

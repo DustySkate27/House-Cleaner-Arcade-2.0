@@ -54,6 +54,7 @@ public class economyManager : MonoBehaviour
     void Update()
     {
         sumarDinero();
+        Debug.Log(LevelMoney);
         Debug.Log(playerMoney);
     }
 }
