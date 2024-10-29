@@ -4195,6 +4195,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1118739018}
     m_Modifications:
+    - target: {fileID: 251832723636222589, guid: 99e369822be56e14fa27158652b18149, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 136
+      objectReference: {fileID: 0}
     - target: {fileID: 2226757184922850102, guid: 99e369822be56e14fa27158652b18149, type: 3}
       propertyPath: m_Color.a
       value: 0.9098039
@@ -4378,6 +4382,10 @@ PrefabInstance:
     - target: {fileID: 8417711973355693946, guid: 99e369822be56e14fa27158652b18149, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462003009728729997, guid: 99e369822be56e14fa27158652b18149, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -127
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

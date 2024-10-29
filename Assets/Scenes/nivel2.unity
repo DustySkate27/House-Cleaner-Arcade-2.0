@@ -3907,6 +3907,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1884798419}
     - target: {fileID: 8518281213825871715, guid: 5a085b0a0a7582e44a0505edc111a13b, type: 3}
+      propertyPath: cantidad.Array.size
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518281213825871715, guid: 5a085b0a0a7582e44a0505edc111a13b, type: 3}
       propertyPath: cantidad.Array.data[0]
       value: 
       objectReference: {fileID: 159250660}
