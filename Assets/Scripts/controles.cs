@@ -99,6 +99,15 @@ public class controles : MonoBehaviour
             rb.AddForce(Vector3.left * velocidad.x, ForceMode2D.Impulse);
         }
 
+        if (rb.velocity.x > 0 || rb.velocity.x < 0 || rb.velocity.y > 0 || rb.velocity.y < 0)
+        {
+            audioSource.Play();
+        }
+        else if (rb.velocity.x == 0 || rb.velocity.y == 0)
+        {
+            audioSource.Stop();
+        }
+
     }
 
     private void broom() //if "p" is pressed, some axe of the velocity is different from 0 and the broom isn't active, the Broom instantiates

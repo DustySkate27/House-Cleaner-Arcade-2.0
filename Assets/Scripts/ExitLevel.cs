@@ -5,19 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class ExitLevel : MonoBehaviour
 {
-
+    private AudioSource audioSource;
     private bool hecho = false;
     Animator animator;
 
     public void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Update()
     {
         if (hecho)
         {
+            audioSource.Play();
             animator.SetBool("opening", true);
             animator.SetBool("open", true);
         }
