@@ -15,6 +15,7 @@ public class controles : MonoBehaviour
     [SerializeField] private bool escAct = false;
     [SerializeField] private bool check = false;
     [SerializeField] public Vector2 velocidad;
+    private int perfect; 
     private AudioSource audioSource;
 
     private Rigidbody2D rb;
@@ -41,6 +42,8 @@ public class controles : MonoBehaviour
         cantidadInicial = cantidad.Count; //Keeps the first number of the amount of Dirt in the level.
         updateDirt(null); //Starts the DirtPercent without removing anything.
         doorCheck = GameObject.FindGameObjectWithTag("Puerta").GetComponent<ExitLevel>();
+
+        perfect = 100;
     }
 
     // Update is called once per frame
@@ -149,7 +152,7 @@ public class controles : MonoBehaviour
         {
             cantidadTexto.text = "Dirt: 0%";
             doorCheck.openDoor(true); //Sends a true bool, so the door opens.
-            perfectManager.Instance.perfect = 100;
+            perfectManager.Instance.perfect = perfect;
 
             return;
         }

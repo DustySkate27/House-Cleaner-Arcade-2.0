@@ -8,7 +8,6 @@ public class economyManager : MonoBehaviour
     public static economyManager Instance;
     public int playerMoney;
     public int LevelMoney;
-    private bool getNow = false;
 
     private void Awake()
     {
@@ -34,17 +33,14 @@ public class economyManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "nivel1")
         {
             LevelMoney = 0;
-            getNow = false;
         }
         if (SceneManager.GetActiveScene().name == "nivel2")
         {
             LevelMoney = 0;
-            getNow = false;
         }
         if (SceneManager.GetActiveScene().name == "nivel3")
         {
             LevelMoney = 0;
-            getNow = false;
         }
     }
 
