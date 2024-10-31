@@ -30,7 +30,6 @@ public class perfectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(perfect);
 
     }
 

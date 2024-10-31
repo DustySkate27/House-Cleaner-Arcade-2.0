@@ -85,28 +85,28 @@ public class controles : MonoBehaviour
         if (Input.GetKeyDown("w"))
         {
             rb.AddForce(Vector3.up * velocidad.y, ForceMode2D.Impulse);
+            audioSource.Play();
         }
 
         if (Input.GetKeyDown("s"))
         {
             rb.AddForce(Vector3.down * velocidad.y, ForceMode2D.Impulse);
+            audioSource.Play();
         }
 
         if (Input.GetKeyDown("d"))
         {
             rb.AddForce(Vector3.right * velocidad.x, ForceMode2D.Impulse);
+            audioSource.Play();
         }
 
         if (Input.GetKeyDown("a"))
         {
             rb.AddForce(Vector3.left * velocidad.x, ForceMode2D.Impulse);
-        }
-
-        if (rb.velocity.x > 0 || rb.velocity.x < 0 || rb.velocity.y > 0 || rb.velocity.y < 0)
-        {
             audioSource.Play();
         }
-        else if (rb.velocity.x == 0 || rb.velocity.y == 0)
+
+        if (rb.velocity.x == 0 && rb.velocity.y == 0)
         {
             audioSource.Stop();
         }
