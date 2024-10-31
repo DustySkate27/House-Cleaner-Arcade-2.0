@@ -25,6 +25,11 @@ public class economyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    public void loadLevel()
+    {
         if (SceneManager.GetActiveScene().name == "nivel1")
         {
             LevelMoney = 0;
@@ -44,17 +49,17 @@ public class economyManager : MonoBehaviour
         if (perfectManager.Instance.perfect > 50)
         {
             LevelMoney = 1000;
-            playerMoney = LevelMoney;
-
         }
 
+    }
+    public void getMoney()
+    {
+        playerMoney += LevelMoney;
     }
 
     // Update is called once per frame
     void Update()
     {
         sumarDinero();
-        Debug.Log(LevelMoney);
-        Debug.Log(playerMoney);
     }
 }

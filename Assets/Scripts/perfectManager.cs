@@ -30,10 +30,10 @@ public class perfectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(perfect);
+
     }
 
-    private void iniciaNivel()
+    public void iniciaNivel()
     {
         if (SceneManager.GetActiveScene().name == "nivel1")
         {
@@ -47,8 +47,6 @@ public class perfectManager : MonoBehaviour
         {
             perfect = 0;
         }
-
     }
-
 
 }

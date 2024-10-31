@@ -440,6 +440,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1579608229544371119, guid: 7e602c4396101e54e935fe5fa1f30b97, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579608229544371119, guid: 7e602c4396101e54e935fe5fa1f30b97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -457,11 +461,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1579608229544371119, guid: 7e602c4396101e54e935fe5fa1f30b97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: set_name
       objectReference: {fileID: 0}
     - target: {fileID: 1579608229544371119, guid: 7e602c4396101e54e935fe5fa1f30b97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: CargarJuego
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579608229544371119, guid: 7e602c4396101e54e935fe5fa1f30b97, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1579608229544371119, guid: 7e602c4396101e54e935fe5fa1f30b97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -469,7 +477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1579608229544371119, guid: 7e602c4396101e54e935fe5fa1f30b97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1579608229544371119, guid: 7e602c4396101e54e935fe5fa1f30b97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
