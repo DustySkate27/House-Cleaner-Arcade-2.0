@@ -25,14 +25,15 @@ public class LoadGame : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "win")
         {
             SceneManager.LoadScene("nivel2");
-            perfectManager.Instance.iniciaNivel();
-            economyManager.Instance.loadLevel();
+            economyManager.Instance.LevelMoney = 0;
+            perfectManager.Instance.perfect = 0;
         }
         if (SceneManager.GetActiveScene().name == "win2")
         {
             SceneManager.LoadScene("nivel3");
-            perfectManager.Instance.iniciaNivel();
-            economyManager.Instance.loadLevel();
+            economyManager.Instance.LevelMoney = 0;
+            perfectManager.Instance.perfect = 0;
+
         }
     }
 }

@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class economyManager : MonoBehaviour
 {
     public static economyManager Instance;
-    public int playerMoney;
-    public int LevelMoney;
+    public int playerMoney = 0;
+    public int LevelMoney = 0;
 
     private void Awake()
     {
@@ -28,22 +28,6 @@ public class economyManager : MonoBehaviour
         
     }
 
-    public void loadLevel()
-    {
-        if (SceneManager.GetActiveScene().name == "nivel1")
-        {
-            LevelMoney = 0;
-        }
-        if (SceneManager.GetActiveScene().name == "nivel2")
-        {
-            LevelMoney = 0;
-        }
-        if (SceneManager.GetActiveScene().name == "nivel3")
-        {
-            LevelMoney = 0;
-        }
-    }
-
     private void sumarDinero()
     {
         if (perfectManager.Instance.perfect > 50)
@@ -61,5 +45,7 @@ public class economyManager : MonoBehaviour
     void Update()
     {
         sumarDinero();
+        Debug.Log(playerMoney);
+        Debug.Log(LevelMoney);
     }
 }

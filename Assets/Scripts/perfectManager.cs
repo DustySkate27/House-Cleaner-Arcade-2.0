@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class perfectManager : MonoBehaviour
 {
     public static perfectManager Instance;
-    public int perfect;
+    public int perfect = 0;
 
     private void Awake()
     {
@@ -30,23 +30,7 @@ public class perfectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    public void iniciaNivel()
-    {
-        if (SceneManager.GetActiveScene().name == "nivel1")
-        {
-            perfect = 0;
-        }
-        if (SceneManager.GetActiveScene().name == "nivel2")
-        {
-            perfect = 0;
-        }
-        if (SceneManager.GetActiveScene().name == "nivel3")
-        {
-            perfect = 0;
-        }
+        Debug.Log(perfect);
     }
 
 }

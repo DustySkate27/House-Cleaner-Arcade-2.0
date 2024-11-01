@@ -43,7 +43,6 @@ public class controles : MonoBehaviour
         updateDirt(null); //Starts the DirtPercent without removing anything.
         doorCheck = GameObject.FindGameObjectWithTag("Puerta").GetComponent<ExitLevel>();
 
-        perfect = 100;
     }
 
     // Update is called once per frame
@@ -152,7 +151,6 @@ public class controles : MonoBehaviour
         {
             cantidadTexto.text = "Dirt: 0%";
             doorCheck.openDoor(true); //Sends a true bool, so the door opens.
-            perfectManager.Instance.perfect = perfect;
 
             return;
         }

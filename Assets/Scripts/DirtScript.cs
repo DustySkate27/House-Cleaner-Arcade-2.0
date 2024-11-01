@@ -14,10 +14,11 @@ public class DirtScript : MonoBehaviour
     [SerializeField] private float damageTimer;
     [SerializeField] private float damageInterval;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -42,6 +43,7 @@ public class DirtScript : MonoBehaviour
 
                 if (Health <= 0)
                 {
+                    perfectManager.Instance.perfect += 100;
                     Destroy(gameObject);
                 }
             }
