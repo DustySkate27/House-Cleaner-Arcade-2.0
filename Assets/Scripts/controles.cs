@@ -12,7 +12,7 @@ public class controles : MonoBehaviour
     [SerializeField] public Transform spawnLeft;
     [SerializeField] public Transform spawnRight;
     [SerializeField] public GameObject escoba;
-    [SerializeField] private bool escAct = false;
+    [SerializeField] public bool escAct = false;
     [SerializeField] private bool check = false;
     [SerializeField] public Vector2 velocidad;
     private int perfect; 
