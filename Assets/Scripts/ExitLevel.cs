@@ -19,15 +19,14 @@ public class ExitLevel : MonoBehaviour
     {
         if (hecho)
         {
-            audioSource.Play();
             animator.SetBool("opening", true);
             animator.SetBool("open", true);
         }
     }
-
     public void openDoor(bool act)
     {
         hecho = act;
+        audioSource.Play();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
