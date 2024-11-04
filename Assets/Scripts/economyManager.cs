@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class economyManager : MonoBehaviour
 {
     public static economyManager Instance;
-    public int playerMoney = 0;
-    public int LevelMoney = 0;
+    public static int playerMoney = 150;
+    public static int LevelMoney = 0;
 
     private void Awake()
     {
@@ -30,9 +30,10 @@ public class economyManager : MonoBehaviour
 
     private void sumarDinero()
     {
-        if (perfectManager.Instance.perfect > 50)
+        if (perfectManager.perfect > 50) //Si hace mas del 50%
         {
-            LevelMoney = 1000;
+            LevelMoney = 1000; //Se le da esta plata
+            perfectManager.perfect = 0; //Y se resetea el perfect para el proximo nivel
         }
 
     }

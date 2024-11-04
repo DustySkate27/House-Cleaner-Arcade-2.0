@@ -43,7 +43,7 @@ public class DirtScript : MonoBehaviour
 
                 if (Health <= 0)
                 {
-                    perfectManager.Instance.perfect += 100;
+                    perfectManager.perfect += 100;
                     Destroy(gameObject);
                 }
             }
