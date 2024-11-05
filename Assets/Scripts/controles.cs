@@ -15,7 +15,7 @@ public class controles : MonoBehaviour
     [SerializeField] public bool escAct = false;
     [SerializeField] private bool check = false;
     [SerializeField] public Vector2 velocidad;
-    private int perfect; 
+
     private AudioSource audioSource;
 
     private Rigidbody2D rb;
