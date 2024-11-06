@@ -14,8 +14,9 @@ public class DirtScript : MonoBehaviour
     [SerializeField] private float damageTimer;
     [SerializeField] private float damageInterval;
 
-    [SerializeField] private int givePerfection = 0;
+    private int givePerfection = 30;
 
+    public GameObject crater;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +58,13 @@ public class DirtScript : MonoBehaviour
         if (collision.CompareTag("water1"))
         {
             isInWater = true;
+        }
+
+        if (collision.gameObject.CompareTag("broom"))
+        {
+            crater.SetActive(true);
+            perfectManager.perfect -= 80;
+            Destroy(gameObject);
         }
     }
 

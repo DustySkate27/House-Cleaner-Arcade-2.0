@@ -9,6 +9,7 @@ public class EscobaFunction : MonoBehaviour
     [SerializeField] private float tiempoActual;
     [SerializeField] private float tiempoDeVida;
 
+    
     private GameObject puerta;
     private GameObject player;
 
@@ -42,5 +43,6 @@ public class EscobaFunction : MonoBehaviour
             collision.GetComponent<vidaMugre>().tomarDanio(danio);
             updateDirt.updateDirt(collision.gameObject);
         }
+
     }
 }

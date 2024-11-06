@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2813874043342018817}
   m_Layer: 0
   m_Name: escoba
-  m_TagString: Untagged
+  m_TagString: broom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00022566319, y: -0.030055344}
+  m_Offset: {x: 0.00022566319, y: -0.029833946}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.05190231, y: 0.041613072}
+  m_Size: {x: 0.06791815, y: 0.041170307}
   m_EdgeRadius: 0
 --- !u!114 &2997366807898648002
 MonoBehaviour:
@@ -147,6 +147,7 @@ MonoBehaviour:
   danio: 1
   tiempoActual: 0
   tiempoDeVida: 1
+  crater: {fileID: 8556794376553538738, guid: e6cc16743aee9ba489b63b0575861c38, type: 3}
   tareaHecha: 1
 --- !u!95 &2813874043342018817
 Animator:

@@ -30,12 +30,17 @@ public class economyManager : MonoBehaviour
 
     public void calculoDinero()
     {
-        if (perfectManager.perfect > 50) //Si hace mas del 50%
+        if (perfectManager.perfect == 100) //Si hace mas del 50%
         {
             LevelMoney = 50; //Se le da esta plata
             perfectManager.perfect = 100; //Y se resetea el perfect para el proximo nivel
         }
 
+        if(perfectManager.perfect < 100)
+        {
+            LevelMoney = 20;
+            perfectManager.perfect = 100;
+        }
     }
     public void getMoney()
     {

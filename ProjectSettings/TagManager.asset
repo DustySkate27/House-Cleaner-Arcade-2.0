@@ -8,6 +8,8 @@ TagManager:
   - Mugre
   - Puerta
   - water1
+  - crater
+  - broom
   layers:
   - Default
   - TransparentFX
