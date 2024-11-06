@@ -46,5 +46,10 @@ public class LoadGame : MonoBehaviour
             SceneManager.LoadScene("nivel3");
 
         }
+        if (SceneManager.GetActiveScene().name == "win3")
+        {
+            SceneManager.LoadScene("nivel4");
+
+        }
     }
 }

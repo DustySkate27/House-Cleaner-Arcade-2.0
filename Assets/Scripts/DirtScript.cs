@@ -14,6 +14,8 @@ public class DirtScript : MonoBehaviour
     [SerializeField] private float damageTimer;
     [SerializeField] private float damageInterval;
 
+    [SerializeField] private int givePerfection = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +45,7 @@ public class DirtScript : MonoBehaviour
 
                 if (Health <= 0)
                 {
-                    perfectManager.perfect += 100;
+                    perfectManager.perfect += givePerfection;
                     Destroy(gameObject);
                 }
             }

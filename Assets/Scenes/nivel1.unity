@@ -4344,6 +4344,10 @@ PrefabInstance:
       propertyPath: Health
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1455673702341035374, guid: 4c687486ddbf2d440b3c3b56be7a4b5b, type: 3}
+      propertyPath: givePerfection
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3989092898986692627, guid: 4c687486ddbf2d440b3c3b56be7a4b5b, type: 3}
       propertyPath: m_SortingOrder
       value: 1
