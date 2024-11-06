@@ -661,6 +661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pausa
       objectReference: {fileID: 0}
+    - target: {fileID: 8417711973355693946, guid: 99e369822be56e14fa27158652b18149, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
