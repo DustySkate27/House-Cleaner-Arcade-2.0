@@ -4072,6 +4072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dirt bar
       objectReference: {fileID: 0}
+    - target: {fileID: 8556020220700792034, guid: a99ef370d72174f4b8c3af11fc7aafcc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4086,9 +4090,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 515513995}
     m_Modifications:
     - target: {fileID: 1599751712930116920, guid: 24bbb1dbd03f40e4c8b95380118b1566, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599751712930116920, guid: 24bbb1dbd03f40e4c8b95380118b1566, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599751712930116920, guid: 24bbb1dbd03f40e4c8b95380118b1566, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1280696956, guid: 2495dec29ca5a6b40be91bf7d7e28ebf, type: 3}
+      objectReference: {fileID: 21300000, guid: 1111b390895d75c4b858ca0683e35430, type: 3}
     - target: {fileID: 1599751712930116920, guid: 24bbb1dbd03f40e4c8b95380118b1566, type: 3}
       propertyPath: m_SortingOrder
       value: 0
@@ -4338,7 +4350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8417711973355693946, guid: 99e369822be56e14fa27158652b18149, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
