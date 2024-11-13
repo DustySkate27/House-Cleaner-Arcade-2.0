@@ -56,12 +56,14 @@ public class ExitLevel : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "nivel3")
         {
             SceneManager.LoadScene("win3");
+            economyManager.Instance.calculoDinero();
             economyManager.Instance.getMoney();
         }
 
         if (SceneManager.GetActiveScene().name == "nivel4")
         {
             SceneManager.LoadScene("win4");
+            economyManager.Instance.calculoDinero();
             economyManager.Instance.getMoney();
         }
 

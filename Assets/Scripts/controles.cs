@@ -151,6 +151,7 @@ public class controles : MonoBehaviour
         {
             cantidadTexto.text = "Dirt: 0%";
             doorCheck.openDoor(true); //Sends a true bool, so the door opens.
+            perfectManager.perfect += 50;
 
             return;
         }

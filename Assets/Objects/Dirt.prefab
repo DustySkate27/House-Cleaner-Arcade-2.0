@@ -98,12 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b268cf505d3b26d40bddefb41378b679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 5
+  Health: 3
   DamagePerSecond: 1
   SizeReductionPerSecond: 0.2
   damageTimer: 0
   damageInterval: 1
-  givePerfection: 100
+  crater: {fileID: 0}
 --- !u!58 &5131587248751750551
 CircleCollider2D:
   m_ObjectHideFlags: 0

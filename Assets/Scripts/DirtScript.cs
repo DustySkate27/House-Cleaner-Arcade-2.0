@@ -14,7 +14,7 @@ public class DirtScript : MonoBehaviour
     [SerializeField] private float damageTimer;
     [SerializeField] private float damageInterval;
 
-    private int givePerfection = 30;
+    private int givePerfection = 10;
 
     public GameObject crater;
 

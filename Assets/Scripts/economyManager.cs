@@ -38,7 +38,7 @@ public class economyManager : MonoBehaviour
 
         if(perfectManager.perfect < 100)
         {
-            LevelMoney = 20;
+            LevelMoney = 30;
             perfectManager.perfect = 100;
         }
     }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class perfectManager : MonoBehaviour
 {
     public static perfectManager Instance;
-    public static int perfect = 100;
+    public static int perfect = 0;
 
     private void Awake()
     {
