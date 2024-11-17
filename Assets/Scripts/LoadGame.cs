@@ -13,10 +13,12 @@ public class LoadGame : MonoBehaviour
 
     public void CargarJuego()
     {
+        soundPlayer.Instance.playButtonSound();
         SceneManager.LoadScene("nivel1");
     }
     public void volverMenu()
     {
+        soundPlayer.Instance.playButtonSound();
         SceneManager.LoadScene("Menu");
         perfectManager.perfect = 0;
         economyManager.LevelMoney = 0;
@@ -33,6 +35,8 @@ public class LoadGame : MonoBehaviour
 
     public void CargarNivel()
     {
+        soundPlayer.Instance.playButtonSound();
+
         if (SceneManager.GetActiveScene().name == "win")
         {
             SceneManager.LoadScene("nivel2");

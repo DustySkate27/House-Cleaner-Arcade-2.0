@@ -309,7 +309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4f2ad3f0f3918c478651dc517ae0dcc, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -816,6 +816,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1118739021}
+    - target: {fileID: 5644226998986691200, guid: 99e369822be56e14fa27158652b18149, type: 3}
+      propertyPath: m_text
+      value: "Debes limpiar toda la mugre que hay en el suelo hasta que el contador
+        de \"Dirt\" llegue al 0%.\nTe mueves con W,A,S y D. \nSaca tu escoba para
+        limpiar con la letra P."
+      objectReference: {fileID: 0}
     - target: {fileID: 6595998137709096472, guid: 99e369822be56e14fa27158652b18149, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2806,7 +2812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434505beeec534a4ea2f5816edffecbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonSound: {fileID: 8300000, guid: 683e705b442c0dc48ab2f269525766ea, type: 3}
+  buttonSound: {fileID: 8300000, guid: 6aa236f910fd0ed42bad917526e1a86c, type: 3}
 --- !u!1001 &1128384438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5042,6 +5048,10 @@ PrefabInstance:
       propertyPath: pressureMenuUI
       value: 
       objectReference: {fileID: 1141538177}
+    - target: {fileID: 8518281213825871715, guid: 5a085b0a0a7582e44a0505edc111a13b, type: 3}
+      propertyPath: perfection
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8518281213825871715, guid: 5a085b0a0a7582e44a0505edc111a13b, type: 3}
       propertyPath: cantidadTexto
       value: 

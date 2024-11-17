@@ -15,12 +15,13 @@ public class musicPlayer : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(this.gameObject);
+
         }
         else
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update

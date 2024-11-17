@@ -26,7 +26,7 @@ public class controles : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cantidadTexto;
     private float percent;
     private ExitLevel doorCheck;
-
+    [SerializeField] private int perfection;
 
     private Animator animator;
 
@@ -152,13 +152,15 @@ public class controles : MonoBehaviour
         {
             cantidadTexto.text = "Dirt: 0%";
             doorCheck.openDoor(true); //Sends a true bool, so the door opens.
-            
-            if (SceneManager.GetActiveScene().name == "level1")
+
+            /*if (SceneManager.GetActiveScene().name == "nivel1")
                 perfectManager.perfect += 100;
             else
                 perfectManager.perfect += 25;
 
-            return;
+            return;*/
+
+            perfectManager.perfect += perfection;
         }
 
         percent = cantidad.Count/cantidadInicial*100;

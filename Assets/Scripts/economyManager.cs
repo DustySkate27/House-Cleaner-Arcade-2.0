@@ -14,12 +14,13 @@ public class economyManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+
         }
         else
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
@@ -30,13 +31,13 @@ public class economyManager : MonoBehaviour
 
     public void calculoDinero()
     {
-        if (perfectManager.perfect == 100) //Si hace mas del 50%
+        if (perfectManager.perfect >= 95) //Si hace mas del 50%
         {
             LevelMoney = 50; //Se le da esta plata
             perfectManager.perfectCounter += perfectManager.perfect; //Suma en un acumulador la score total de perfect.
         }
 
-        if(perfectManager.perfect < 100)
+        if(perfectManager.perfect < 95)
         {
             LevelMoney = 30;
             perfectManager.perfectCounter += perfectManager.perfect;

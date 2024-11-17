@@ -9,6 +9,7 @@ public class activeTutorial : MonoBehaviour
 
     public void resumeGame()
     {
+        soundPlayer.Instance.playButtonSound();
         Time.timeScale = 1.0f;
         panelGun.SetActive(false);
     }
