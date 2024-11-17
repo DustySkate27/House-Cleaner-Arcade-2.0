@@ -5,9 +5,7 @@ using UnityEngine;
 public class GunScript : MonoBehaviour
 {
     [SerializeField] private GameObject water1;
-
     [SerializeField] private GameObject water2;
-
     [SerializeField] private GameObject water3;
 
 
@@ -17,10 +15,16 @@ public class GunScript : MonoBehaviour
 
     [SerializeField] private GunControl gunControl;
 
+    private GunControl waterPressure;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        waterPressure = gunControl.GetComponent<GunControl>();
+
         consumptionTimer = 0f;
+
 
     }
 
@@ -29,31 +33,84 @@ public class GunScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && gunControl.WaterTank > 0)
         {
-
-            water1.SetActive(true);
-
-
-            consumptionTimer += Time.deltaTime;
-
-
-            if (consumptionTimer >= 1.0f)
+            if(gunControl.waterPressure1 == true)
             {
-                gunControl.WaterTank -= waterConsumptionRate;
-                consumptionTimer = 0f;
+                water1.SetActive(true);
 
-                if (gunControl.WaterTank <= 0)
+
+                consumptionTimer += Time.deltaTime;
+
+
+                if (consumptionTimer >= 1.0f)
                 {
-                    gunControl.WaterTank = 0;
-                    water1.SetActive(false);
+                    gunControl.WaterTank -= 2;
+                    consumptionTimer = 0f;
+
+                    if (gunControl.WaterTank <= 0)
+                    {
+                        gunControl.WaterTank = 0;
+                        water1.SetActive(false);
+                    }
                 }
+
             }
+            else if (gunControl.waterPressure2 == true)
+            {
+                water2.SetActive(true);
+
+
+                consumptionTimer += Time.deltaTime;
+
+
+                if (consumptionTimer >= 1.0f)
+                {
+                    gunControl.WaterTank -= 5;
+                    consumptionTimer = 0f;
+
+                    if (gunControl.WaterTank <= 0)
+                    {
+                        gunControl.WaterTank = 0;
+                        water2.SetActive(false);
+                    }
+                }
+
+
+            }
+            else if (gunControl.waterPressure3 == true)
+            {
+                water3.SetActive(true);
+
+
+                consumptionTimer += Time.deltaTime;
+
+
+                if (consumptionTimer >= 1.0f)
+                {
+                    gunControl.WaterTank -= 10;
+                    consumptionTimer = 0f;
+
+                    if (gunControl.WaterTank <= 0)
+                    {
+                        gunControl.WaterTank = 0;
+                        water3.SetActive(false);
+                    }
+                }
+
+
+            }
+
         }
         else
         {
 
             water1.SetActive(false);
+            water2.SetActive(false);
+            water3.SetActive(false);
             consumptionTimer = 0f;
         }
     }
+
+
+ 
 }
 

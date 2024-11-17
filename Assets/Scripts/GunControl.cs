@@ -16,13 +16,22 @@ public class GunControl : MonoBehaviour
 
     public float WaterTank;
 
-    [SerializeField] private Image waterBar; 
+    [SerializeField] private Image waterBar;
     
+
+
+    public bool waterPressure1 = true;
+    public bool waterPressure2 = false;
+    public bool waterPressure3 = false;
+
+    [SerializeField] private GameObject pressureMenuUI;
+    private bool isPressureUIOpen = false;
 
     // Start is called before the first frame update
     void Start()
     {
         broomControl = GetComponent<controles>();
+        waterPressure1 = true;
     }
 
     // Update is called once per frame
@@ -31,6 +40,15 @@ public class GunControl : MonoBehaviour
         gun();
 
         waterBar.fillAmount = WaterTank / 100;
+
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            isPressureUIOpen = !isPressureUIOpen;
+            pressureMenuUI.SetActive(isPressureUIOpen);
+        }
+
+
+        //waterPressureKey();
     }
     private void gun()
     {
@@ -83,6 +101,63 @@ public class GunControl : MonoBehaviour
         gunLeft.SetActive(false);
     }
 
+
+    public void waterPressure1Active()
+    {
+        waterPressure1 = true;
+        waterPressure2 = false;
+        waterPressure3 = false;
+    }
+
+    public void waterPressure2Active()
+    {
+        waterPressure2 = true;
+        waterPressure1 = false;     
+        waterPressure3 = false;
+    }
+
+    public void waterPressure3Active()
+    {
+        waterPressure3 = true;
+        waterPressure1 = false;
+        waterPressure2 = false;
+    }
+
+  /*  private void waterPressureKey()
+    {
+
+        if (Input.GetKeyDown("1")){
+
+            waterPressure1 = true;
+            waterPressure2 = false;
+            waterPressure3 = false;
+
+
+        }
+
+        if (Input.GetKeyDown("2"))
+        {
+
+            waterPressure2 = true;
+            waterPressure1 = false;
+            waterPressure3 = false;
+
+
+        }
+
+
+        if (Input.GetKeyDown("3"))
+        {
+
+            waterPressure3 = true;
+            waterPressure1 = false;
+            waterPressure2 = false;
+
+
+        }
+
+
+    }*/
 
 
 }

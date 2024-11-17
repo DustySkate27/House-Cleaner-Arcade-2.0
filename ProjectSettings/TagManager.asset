@@ -10,6 +10,8 @@ TagManager:
   - water1
   - crater
   - broom
+  - water2
+  - water3
   layers:
   - Default
   - TransparentFX

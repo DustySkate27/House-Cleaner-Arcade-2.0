@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DirtScript : MonoBehaviour
+public class Dirt2Script : MonoBehaviour
 {
     [SerializeField] private float Health;
 
@@ -55,22 +55,22 @@ public class DirtScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("water1"))
+        if (collision.CompareTag("water2"))
         {
             isInWater = true;
         }
 
-        if (collision.gameObject.CompareTag("broom") || collision.CompareTag("water2") || collision.CompareTag("water3"))
+        if (collision.gameObject.CompareTag("broom") || collision.CompareTag("water3"))
         {
             crater.SetActive(true);
-            perfectManager.perfect -= 10;
+            perfectManager.perfect -= 80;
             Destroy(gameObject);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("water1"))
+        if (collision.CompareTag("water2"))
         {
             isInWater = false;
             damageTimer = 0f;
