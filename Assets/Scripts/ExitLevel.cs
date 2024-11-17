@@ -22,6 +22,11 @@ public class ExitLevel : MonoBehaviour
             animator.SetBool("opening", true);
             animator.SetBool("open", true);
         }
+
+        if (Input.GetKeyDown("u"))
+        {
+            hecho = true;
+        }
     }
     public void openDoor(bool act)
     {

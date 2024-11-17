@@ -2,41 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class tienda : MonoBehaviour
-{
-    public static tienda Instance;
-
+{ 
     //silbato|Red Scream
     public GameObject silAct;
     public GameObject silInact;
-    public static bool sBuy = false;
+    
 
     //poción|Solving Potion
     public GameObject potAct;
     public GameObject potInact; 
-    public static bool pBuy = false;
+    
 
     public TextMeshProUGUI actualMon;
     public GameObject price;
     public TextMeshProUGUI priceText;
     public GameObject textPan;
     public TextMeshProUGUI descText; 
-
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
 
 
     // Start is called before the first frame update
@@ -48,7 +33,10 @@ public class tienda : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        actualMon.text = economyManager.playerMoney.ToString();
+        if (SceneManager.GetActiveScene().name == "store") 
+        {
+            actualMon.text = economyManager.playerMoney.ToString();
+        }
     }
 
     public void OnHighlightSil()
@@ -85,9 +73,9 @@ public class tienda : MonoBehaviour
 
     public void silBuyed()
     {
-        if (sBuy == false && economyManager.playerMoney >= 50)
+        if (itemManager.sBuy == false && economyManager.playerMoney >= 50)
         {
-            sBuy = true;
+            itemManager.sBuy = true;
             economyManager.playerMoney-=50;
             silAct.gameObject.SetActive(false);
             silInact.gameObject.SetActive(true);
@@ -100,9 +88,9 @@ public class tienda : MonoBehaviour
 
     public void potBuyed()
     {
-        if (pBuy == false && economyManager.playerMoney >= 100)
+        if (itemManager.pBuy == false && economyManager.playerMoney >= 100)
         {
-            pBuy = true;
+            itemManager.pBuy = true;
             economyManager.playerMoney -= 100;
             potAct.gameObject.SetActive(false);
             potInact.gameObject.SetActive(true);
@@ -115,11 +103,11 @@ public class tienda : MonoBehaviour
 
     public void checker()
     {
-        if (sBuy == false)
+        if (itemManager.sBuy == false)
         {
             silAct.SetActive(true);
         }
-        if (pBuy == false)
+        if (itemManager.pBuy == false)
         {
             potAct.SetActive(true);
         }

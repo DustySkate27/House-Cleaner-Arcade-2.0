@@ -34,7 +34,7 @@ public class LoadGame : MonoBehaviour
 
     public void CargarNivel()
     {
-        sound.PlayOneShot(buttonSound);
+        //sound.PlayOneShot(buttonSound);
         if (SceneManager.GetActiveScene().name == "win")
         {
             SceneManager.LoadScene("nivel2");
@@ -62,6 +62,7 @@ public class LoadGame : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "win3")
         {
+
             SceneManager.LoadScene("nivel4");
 
             perfectManager.perfect = 0;
