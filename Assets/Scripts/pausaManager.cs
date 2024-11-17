@@ -48,5 +48,8 @@ public class pausaManager : MonoBehaviour
     public void volverMenu()
     {
         SceneManager.LoadScene("Menu");
+        perfectManager.perfect = 0;
+        economyManager.playerMoney = 0;
+        economyManager.LevelMoney = 0;  
     }
 }
