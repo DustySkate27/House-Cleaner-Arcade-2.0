@@ -6,8 +6,9 @@ public class itemManager : MonoBehaviour
 {
     public static itemManager Instance;
 
-    [SerializeField] public static bool sBuy = false;
-    [SerializeField] public static bool pBuy = false;
+    public static int visits = 0;
+    public bool sBuy = false;
+    public bool pBuy = false;
 
     private void Awake()
     {

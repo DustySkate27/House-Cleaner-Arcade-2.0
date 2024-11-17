@@ -73,9 +73,9 @@ public class tienda : MonoBehaviour
 
     public void silBuyed()
     {
-        if (itemManager.sBuy == false && economyManager.playerMoney >= 50)
+        if (itemManager.Instance.sBuy == false && economyManager.playerMoney >= 50)
         {
-            itemManager.sBuy = true;
+            itemManager.Instance.sBuy = true;
             economyManager.playerMoney-=50;
             silAct.gameObject.SetActive(false);
             silInact.gameObject.SetActive(true);
@@ -88,9 +88,9 @@ public class tienda : MonoBehaviour
 
     public void potBuyed()
     {
-        if (itemManager.pBuy == false && economyManager.playerMoney >= 100)
+        if (itemManager.Instance.pBuy == false && economyManager.playerMoney >= 100)
         {
-            itemManager.pBuy = true;
+            itemManager.Instance.pBuy = true;
             economyManager.playerMoney -= 100;
             potAct.gameObject.SetActive(false);
             potInact.gameObject.SetActive(true);
@@ -103,14 +103,27 @@ public class tienda : MonoBehaviour
 
     public void checker()
     {
-        if (itemManager.sBuy == false)
+        if (itemManager.Instance.sBuy == false)
         {
             silAct.SetActive(true);
+            silInact.SetActive(false);
         }
-        if (itemManager.pBuy == false)
+        if (itemManager.Instance.pBuy == false)
         {
             potAct.SetActive(true);
+            potInact.SetActive(false);
         }
+        if (itemManager.Instance.sBuy == true)
+        {
+            silInact.SetActive(true);
+            silAct.SetActive(false);
+        }
+        if (itemManager.Instance.pBuy == true)
+        {
+            potInact.SetActive(true);
+            potAct.SetActive(false);
+        }
+
     }
 
 }

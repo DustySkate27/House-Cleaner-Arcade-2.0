@@ -41,11 +41,12 @@ public class LoadGame : MonoBehaviour
             musicPlayer.instance.putStore();
             SceneManager.LoadScene("store");
 
+            itemManager.visits++;
             perfectManager.perfect = 0;
             economyManager.LevelMoney = 0;
 
         }
-        if (SceneManager.GetActiveScene().name == "store")
+        if (SceneManager.GetActiveScene().name == "store" && itemManager.visits == 1)
         {
             musicPlayer.instance.putMusic();
             SceneManager.LoadScene("nivel3");
@@ -56,12 +57,23 @@ public class LoadGame : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "win3")
         {
+            musicPlayer.instance.putStore();
+            SceneManager.LoadScene("store");
 
+            itemManager.visits++;
+            perfectManager.perfect = 0;
+            economyManager.LevelMoney = 0;
+
+        }
+        if (SceneManager.GetActiveScene().name == "store" && itemManager.visits == 2)
+        {
+            musicPlayer.instance.putMusic();
             SceneManager.LoadScene("nivel4");
 
             perfectManager.perfect = 0;
             economyManager.LevelMoney = 0;
 
         }
+
     }
 }
