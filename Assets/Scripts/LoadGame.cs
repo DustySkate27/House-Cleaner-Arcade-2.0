@@ -21,6 +21,10 @@ public class LoadGame : MonoBehaviour
         perfectManager.perfect = 0;
         economyManager.LevelMoney = 0;
         economyManager.playerMoney = 0;
+        itemManager.visits = 0;
+        itemManager.Instance.sBuy = false;
+        itemManager.Instance.pBuy = false;
+
     }
     public void salir()
     {
