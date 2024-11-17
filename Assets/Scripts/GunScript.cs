@@ -6,12 +6,14 @@ public class GunScript : MonoBehaviour
 {
     [SerializeField] private GameObject water1;
 
- 
+    [SerializeField] private GameObject water2;
+
+    [SerializeField] private GameObject water3;
+
+
     [SerializeField] private float waterConsumptionRate;
 
     [SerializeField] private float consumptionTimer;
-
-    //private GunControl gunControl;
 
     [SerializeField] private GunControl gunControl;
 
@@ -19,11 +21,7 @@ public class GunScript : MonoBehaviour
     void Start()
     {
         consumptionTimer = 0f;
-        //gunControl = GetComponent<GunControl>();
-        if (gunControl == null)
-        {
-            Debug.LogError("GunControl no encontrado en el GameObject.");
-        }
+
     }
 
     // Update is called once per frame

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GunControl : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class GunControl : MonoBehaviour
     private controles broomControl;
 
 
+
     public float WaterTank;
+
+    [SerializeField] private Image waterBar; 
     
 
     // Start is called before the first frame update
@@ -25,6 +29,8 @@ public class GunControl : MonoBehaviour
     void Update()
     {
         gun();
+
+        waterBar.fillAmount = WaterTank / 100;
     }
     private void gun()
     {
