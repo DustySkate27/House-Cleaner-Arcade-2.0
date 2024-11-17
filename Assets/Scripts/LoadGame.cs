@@ -6,22 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class LoadGame : MonoBehaviour
 {
-    private AudioSource sound;
-    [SerializeField] public AudioClip buttonSound;
 
     private void Start()
     {
-        sound = GetComponent<AudioSource>();
     }
 
     public void CargarJuego()
     {
-        sound.PlayOneShot(buttonSound);
         SceneManager.LoadScene("nivel1");
     }
     public void volverMenu()
     {
-        sound.PlayOneShot(buttonSound);
         SceneManager.LoadScene("Menu");
         perfectManager.perfect = 0;
         economyManager.LevelMoney = 0;
@@ -34,7 +29,6 @@ public class LoadGame : MonoBehaviour
 
     public void CargarNivel()
     {
-        //sound.PlayOneShot(buttonSound);
         if (SceneManager.GetActiveScene().name == "win")
         {
             SceneManager.LoadScene("nivel2");
