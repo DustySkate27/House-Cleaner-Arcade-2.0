@@ -60,7 +60,7 @@ public class DirtScript : MonoBehaviour
             isInWater = true;
         }
 
-        if (collision.gameObject.CompareTag("broom") || collision.CompareTag("water2") || collision.CompareTag("water3"))
+        if (collision.CompareTag("water2") || collision.CompareTag("water3"))
         {
             crater.SetActive(true);
             perfectManager.perfect -= 10;

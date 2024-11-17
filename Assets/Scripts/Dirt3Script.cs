@@ -59,13 +59,6 @@ public class Dirt3Script : MonoBehaviour
         {
             isInWater = true;
         }
-
-        if (collision.gameObject.CompareTag("broom"))
-        {
-            crater.SetActive(true);
-            perfectManager.perfect -= 80;
-            Destroy(gameObject);
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

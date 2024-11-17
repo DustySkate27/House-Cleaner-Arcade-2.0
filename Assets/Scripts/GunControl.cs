@@ -13,7 +13,6 @@ public class GunControl : MonoBehaviour
     private controles broomControl;
 
 
-
     public float WaterTank;
 
     [SerializeField] private Image waterBar;
@@ -48,7 +47,7 @@ public class GunControl : MonoBehaviour
         }
 
 
-        //waterPressureKey();
+        waterPressureKey();
     }
     private void gun()
     {
@@ -123,7 +122,7 @@ public class GunControl : MonoBehaviour
         waterPressure2 = false;
     }
 
-  /*  private void waterPressureKey()
+    private void waterPressureKey()
     {
 
         if (Input.GetKeyDown("1")){
@@ -157,7 +156,7 @@ public class GunControl : MonoBehaviour
         }
 
 
-    }*/
+    }
 
 
 }
