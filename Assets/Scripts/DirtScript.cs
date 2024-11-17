@@ -63,7 +63,7 @@ public class DirtScript : MonoBehaviour
         if (collision.gameObject.CompareTag("broom"))
         {
             crater.SetActive(true);
-            perfectManager.perfect -= 80;
+            perfectManager.perfect -= 10;
             Destroy(gameObject);
         }
     }

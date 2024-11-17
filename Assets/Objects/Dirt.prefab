@@ -103,6 +103,7 @@ MonoBehaviour:
   SizeReductionPerSecond: 0.2
   damageTimer: 0
   damageInterval: 1
+  givePerfection: 10
   crater: {fileID: 0}
 --- !u!58 &5131587248751750551
 CircleCollider2D:
