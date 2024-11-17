@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class controles : MonoBehaviour
 {
@@ -151,7 +152,11 @@ public class controles : MonoBehaviour
         {
             cantidadTexto.text = "Dirt: 0%";
             doorCheck.openDoor(true); //Sends a true bool, so the door opens.
-            perfectManager.perfect += 50;
+            
+            if (SceneManager.GetActiveScene().name == "level1")
+                perfectManager.perfect += 100;
+            else
+                perfectManager.perfect += 25;
 
             return;
         }

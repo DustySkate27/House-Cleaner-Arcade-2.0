@@ -7,6 +7,8 @@ public class perfectManager : MonoBehaviour
 {
     public static perfectManager Instance;
     public static int perfect = 0;
+    public static int perfectCounter = 0;
+    public static int starCounter = 0;
 
     private void Awake()
     {
@@ -30,7 +32,7 @@ public class perfectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(perfect);
+        
     }
 
 }

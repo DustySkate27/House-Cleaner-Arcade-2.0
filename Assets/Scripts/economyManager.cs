@@ -33,13 +33,13 @@ public class economyManager : MonoBehaviour
         if (perfectManager.perfect == 100) //Si hace mas del 50%
         {
             LevelMoney = 50; //Se le da esta plata
-            perfectManager.perfect = 100; //Y se resetea el perfect para el proximo nivel
+            perfectManager.perfectCounter += perfectManager.perfect; //Suma en un acumulador la score total de perfect.
         }
 
         if(perfectManager.perfect < 100)
         {
             LevelMoney = 30;
-            perfectManager.perfect = 100;
+            perfectManager.perfectCounter += perfectManager.perfect;
         }
     }
     public void getMoney()
