@@ -14,7 +14,7 @@ public class economyManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject);
 
         }
         else
@@ -31,16 +31,25 @@ public class economyManager : MonoBehaviour
 
     public void calculoDinero()
     {
-        if (perfectManager.perfect >= 95) //Si hace mas del 50%
+        if (perfectManager.perfect == 100) //Si hace el perfect
         {
-            LevelMoney = 50; //Se le da esta plata
+            LevelMoney = 80; //Se le da esta plata
             perfectManager.perfectCounter += perfectManager.perfect; //Suma en un acumulador la score total de perfect.
+            perfectManager.starCounter += starManager.starFilter; //Suma en un acumulador las score total de star.
         }
 
-        if(perfectManager.perfect < 95)
+        if(perfectManager.perfect < 50)
         {
-            LevelMoney = 30;
+            LevelMoney = 50;
             perfectManager.perfectCounter += perfectManager.perfect;
+            perfectManager.starCounter += starManager.starFilter;
+        }
+
+        if (perfectManager.perfect < 25)
+        {
+            LevelMoney = 20;
+            perfectManager.perfectCounter += perfectManager.perfect;
+            perfectManager.starCounter += starManager.starFilter;
         }
     }
     public void getMoney()

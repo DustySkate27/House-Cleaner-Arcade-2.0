@@ -26,6 +26,9 @@ public class LoadGame : MonoBehaviour
         itemManager.visits = 0;
         itemManager.Instance.sBuy = false;
         itemManager.Instance.pBuy = false;
+        starManager.starFilter = 0;
+        perfectManager.starCounter = 0;
+        perfectManager.perfectCounter = 0;
 
     }
     public void salir()
@@ -41,6 +44,7 @@ public class LoadGame : MonoBehaviour
         {
             SceneManager.LoadScene("nivel2");
 
+            starManager.starFilter = 0;
             perfectManager.perfect = 0;
             economyManager.LevelMoney = 0;
         }
@@ -49,6 +53,7 @@ public class LoadGame : MonoBehaviour
             musicPlayer.instance.putStore();
             SceneManager.LoadScene("store");
 
+            starManager.starFilter = 0;
             itemManager.visits++;
             perfectManager.perfect = 0;
             economyManager.LevelMoney = 0;
@@ -59,6 +64,7 @@ public class LoadGame : MonoBehaviour
             musicPlayer.instance.putMusic();
             SceneManager.LoadScene("nivel3");
 
+            starManager.starFilter = 0;
             perfectManager.perfect = 0;
             economyManager.LevelMoney = 0;
 
@@ -68,6 +74,7 @@ public class LoadGame : MonoBehaviour
             musicPlayer.instance.putStore();
             SceneManager.LoadScene("store");
 
+            starManager.starFilter = 0;
             itemManager.visits++;
             perfectManager.perfect = 0;
             economyManager.LevelMoney = 0;
@@ -78,6 +85,7 @@ public class LoadGame : MonoBehaviour
             musicPlayer.instance.putMusic();
             SceneManager.LoadScene("nivel4");
 
+            starManager.starFilter = 0;
             perfectManager.perfect = 0;
             economyManager.LevelMoney = 0;
 
