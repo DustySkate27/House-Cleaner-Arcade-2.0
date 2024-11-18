@@ -24,16 +24,20 @@ public class perfectManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void countStars()
     {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(perfect >= 25)
+        {
+            starCounter++;
+        }
+        if(perfect >= 50)
+        {
+            starCounter++;
+        }
+        if(perfect >= 100)
+        {
+            starCounter++;
+        }
     }
 
 }

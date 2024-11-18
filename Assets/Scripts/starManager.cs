@@ -4,30 +4,13 @@ using UnityEngine;
 
 public class starManager : MonoBehaviour
 {
-    public static starManager Instance;
-
     public GameObject star1;
     public GameObject star2;
     public GameObject star3;
     public GameObject star1off;
     public GameObject star2off;
     public GameObject star3off;
-    public static int starFilter = 0;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
-        
-    }
+    public int starFilter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -48,14 +31,16 @@ public class starManager : MonoBehaviour
             star1.SetActive(true);
             star1off.SetActive(false);
             starFilter++;
+            
         }
         if (perfectManager.perfect >= 50 && starFilter == 1)
         {
             star2.SetActive(true);
             star2off.SetActive(false);
             starFilter++;
+            
         }
-        if (perfectManager.perfect == 100 && starFilter == 2)
+        if (perfectManager.perfect >= 100 && starFilter == 2)
         {
             star3.SetActive(true);
             star3off.SetActive(false);

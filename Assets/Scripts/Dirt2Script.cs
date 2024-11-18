@@ -63,7 +63,7 @@ public class Dirt2Script : MonoBehaviour
         if (collision.CompareTag("water3"))
         {
             crater.SetActive(true);
-            perfectManager.perfect -= 80;
+            perfectManager.perfect -= 10;
             Destroy(gameObject);
         }
     }

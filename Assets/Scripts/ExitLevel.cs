@@ -49,6 +49,7 @@ public class ExitLevel : MonoBehaviour
             SceneManager.LoadScene("win");
             economyManager.Instance.calculoDinero();
             economyManager.Instance.getMoney();
+            perfectManager.Instance.countStars();
             
         }
 
@@ -57,6 +58,7 @@ public class ExitLevel : MonoBehaviour
             SceneManager.LoadScene("win2");
             economyManager.Instance.calculoDinero();
             economyManager.Instance.getMoney();
+            perfectManager.Instance.countStars();
         }
 
         if (SceneManager.GetActiveScene().name == "nivel3")
@@ -64,6 +66,7 @@ public class ExitLevel : MonoBehaviour
             SceneManager.LoadScene("win3");
             economyManager.Instance.calculoDinero();
             economyManager.Instance.getMoney();
+            perfectManager.Instance.countStars();
         }
 
         if (SceneManager.GetActiveScene().name == "nivel4")
@@ -71,6 +74,7 @@ public class ExitLevel : MonoBehaviour
             SceneManager.LoadScene("win4");
             economyManager.Instance.calculoDinero();
             economyManager.Instance.getMoney();
+            perfectManager.Instance.countStars();
         }
 
     }
