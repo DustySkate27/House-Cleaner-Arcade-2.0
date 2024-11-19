@@ -15,13 +15,10 @@ public class GunScript : MonoBehaviour
 
     [SerializeField] private GunControl gunControl;
 
-    private GunControl waterPressure;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        waterPressure = gunControl.GetComponent<GunControl>();
 
         consumptionTimer = 0f;
 
@@ -38,7 +35,7 @@ public class GunScript : MonoBehaviour
             if(gunControl.waterPressure1 == true)
             {
                 water1.SetActive(true);
-
+                gunControl.isShooting = true;
 
                 consumptionTimer += Time.deltaTime;
 
@@ -59,6 +56,7 @@ public class GunScript : MonoBehaviour
             else if (gunControl.waterPressure2 == true)
             {
                 water2.SetActive(true);
+                gunControl.isShooting = true;
 
 
                 consumptionTimer += Time.deltaTime;
@@ -81,6 +79,7 @@ public class GunScript : MonoBehaviour
             else if (gunControl.waterPressure3 == true)
             {
                 water3.SetActive(true);
+                gunControl.isShooting = true;
 
 
                 consumptionTimer += Time.deltaTime;
@@ -109,6 +108,7 @@ public class GunScript : MonoBehaviour
             water2.SetActive(false);
             water3.SetActive(false);
             consumptionTimer = 0f;
+            gunControl.isShooting = false;
         }
     }
 

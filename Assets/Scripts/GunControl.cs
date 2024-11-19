@@ -18,7 +18,6 @@ public class GunControl : MonoBehaviour
     [SerializeField] private Image waterBar;
     
 
-
     public bool waterPressure1 = true;
     public bool waterPressure2 = false;
     public bool waterPressure3 = false;
@@ -26,17 +25,21 @@ public class GunControl : MonoBehaviour
     [SerializeField] private GameObject pressureMenuUI;
     private bool isPressureUIOpen = false;
 
+    public bool isShooting = false;
+
     // Start is called before the first frame update
     void Start()
     {
         broomControl = GetComponent<controles>();
         waterPressure1 = true;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         gun();
+        waterPressureKey();
 
         waterBar.fillAmount = WaterTank / 100;
 
@@ -46,12 +49,10 @@ public class GunControl : MonoBehaviour
             pressureMenuUI.SetActive(isPressureUIOpen);
         }
 
-
-        waterPressureKey();
     }
     private void gun()
     {
-        if (broomControl != null && !broomControl.escAct)
+        if (broomControl != null && !broomControl.escAct && !isShooting)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow)) // Up
             {
@@ -85,9 +86,9 @@ public class GunControl : MonoBehaviour
                 gunLeft.SetActive(true);
             }
         }
-        else
+        else if (!isShooting)
         {
-            deactivateGuns(); // Si la escoba está activa, desactiva todas las armas
+            deactivateGuns();
         }
     }
     
@@ -134,9 +135,8 @@ public class GunControl : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown("2"))
+       if (Input.GetKeyDown("2"))
         {
-
             waterPressure2 = true;
             waterPressure1 = false;
             waterPressure3 = false;
@@ -147,17 +147,13 @@ public class GunControl : MonoBehaviour
 
         if (Input.GetKeyDown("3"))
         {
-
             waterPressure3 = true;
             waterPressure1 = false;
             waterPressure2 = false;
 
-
         }
 
-
     }
-
 
 }
  

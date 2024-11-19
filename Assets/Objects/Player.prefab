@@ -1076,7 +1076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2493986064042532604
 Transform:
   m_ObjectHideFlags: 0
@@ -1398,7 +1398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2045790893350986226
 Transform:
   m_ObjectHideFlags: 0
@@ -2017,6 +2017,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   cantidadTexto: {fileID: 0}
+  perfection: 25
 --- !u!95 &148701307166473880
 Animator:
   serializedVersion: 5
@@ -2156,6 +2157,7 @@ MonoBehaviour:
   waterPressure2: 0
   waterPressure3: 1
   pressureMenuUI: {fileID: 0}
+  isShooting: 0
 --- !u!1 &7300117307483239444
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,7 +2175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7062820083994445533
 Transform:
   m_ObjectHideFlags: 0
