@@ -38,14 +38,14 @@ public class economyManager : MonoBehaviour
             
         }
 
-        if(perfectManager.perfect < 50)
+        if(perfectManager.perfect >= 50)
         {
             LevelMoney = 50;
             perfectManager.perfectCounter += perfectManager.perfect;
             
         }
 
-        if (perfectManager.perfect < 25)
+        if (perfectManager.perfect >= 25)
         {
             LevelMoney = 20;
             perfectManager.perfectCounter += perfectManager.perfect;

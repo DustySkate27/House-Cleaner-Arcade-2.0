@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &76172937
 RectTransform:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &101766472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -827,6 +827,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberPrefab: {fileID: 1989084321}
   numberText: {fileID: 1989084323}
+  star1: {fileID: 101766471}
+  star2: {fileID: 936215419}
+  star3: {fileID: 76172936}
+  starCount: {fileID: 0}
+  starText: {fileID: 0}
+  perfectCount: {fileID: 0}
+  perfectText: {fileID: 0}
 --- !u!1 &936215419
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &936215420
 RectTransform:
   m_ObjectHideFlags: 0

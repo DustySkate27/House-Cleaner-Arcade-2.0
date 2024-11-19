@@ -572,6 +572,10 @@ PrefabInstance:
       propertyPath: crater
       value: 
       objectReference: {fileID: 2091396812}
+    - target: {fileID: 1455673702341035374, guid: 4c687486ddbf2d440b3c3b56be7a4b5b, type: 3}
+      propertyPath: givePerfection
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7617608817495383536, guid: 4c687486ddbf2d440b3c3b56be7a4b5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.71437
@@ -853,7 +857,7 @@ PrefabInstance:
       objectReference: {fileID: 1391652547}
     - target: {fileID: 1455673702341035374, guid: 4c687486ddbf2d440b3c3b56be7a4b5b, type: 3}
       propertyPath: givePerfection
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7617608817495383536, guid: 4c687486ddbf2d440b3c3b56be7a4b5b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2642,6 +2646,10 @@ PrefabInstance:
       propertyPath: crater
       value: 
       objectReference: {fileID: 322573989}
+    - target: {fileID: 3065052320263258557, guid: 6aa93f6a3f3945c42892c4b0fd341a63, type: 3}
+      propertyPath: givePerfection
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8718385858938517339, guid: 6aa93f6a3f3945c42892c4b0fd341a63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.89
@@ -10111,7 +10119,7 @@ PrefabInstance:
       objectReference: {fileID: 673532971}
     - target: {fileID: 1455673702341035374, guid: 4c687486ddbf2d440b3c3b56be7a4b5b, type: 3}
       propertyPath: givePerfection
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7617608817495383536, guid: 4c687486ddbf2d440b3c3b56be7a4b5b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11274,6 +11282,10 @@ PrefabInstance:
       propertyPath: crater
       value: 
       objectReference: {fileID: 27513833}
+    - target: {fileID: 8232939670816193382, guid: abfdddb06518dea459d575ab8d95618c, type: 3}
+      propertyPath: givePerfection
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 9089185855601942208, guid: abfdddb06518dea459d575ab8d95618c, type: 3}
       propertyPath: m_Name
       value: Dirt2
