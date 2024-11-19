@@ -153,13 +153,6 @@ public class controles : MonoBehaviour
             cantidadTexto.text = "Dirt: 0%";
             doorCheck.openDoor(true); //Sends a true bool, so the door opens.
 
-            /*if (SceneManager.GetActiveScene().name == "nivel1")
-                perfectManager.perfect += 100;
-            else
-                perfectManager.perfect += 25;
-
-            return;*/
-
             perfectManager.perfect += perfection;
         }
 

@@ -33,7 +33,7 @@ public class GunScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && gunControl.WaterTank > 0)
         {
-            //soundPlayer.Instance.playShotGun();
+            
 
             if(gunControl.waterPressure1 == true)
             {

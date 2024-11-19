@@ -7,6 +7,7 @@ public class soundPlayer : MonoBehaviour
     public static soundPlayer Instance;
 
     private AudioSource audioSource;
+    private AudioListener audioListener;
     [SerializeField] private AudioClip buttonSound;
     [SerializeField] private AudioClip shotGun;
 
@@ -28,15 +29,19 @@ public class soundPlayer : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioListener = GetComponent<AudioListener>();
     }
 
     public void playButtonSound()
     {
         audioSource.PlayOneShot(buttonSound);
+
     }
 
     public void playShotGun()
     {
+        AudioListener.volume = 0.3f;
         audioSource.PlayOneShot(shotGun);
+        
     }
 }
