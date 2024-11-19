@@ -31,26 +31,22 @@ public class economyManager : MonoBehaviour
 
     public void calculoDinero()
     {
-        if (perfectManager.perfect >= 100) //Si hace el perfect
+        if (perfectManager.perfect >= 25)
         {
-            LevelMoney = 80; //Se le da esta plata
-            perfectManager.perfectCounter += perfectManager.perfect; //Suma en un acumulador la score total de perfect.
-            
+            LevelMoney = 20;
         }
 
         if(perfectManager.perfect >= 50)
         {
             LevelMoney = 50;
-            perfectManager.perfectCounter += perfectManager.perfect;
-            
         }
-
-        if (perfectManager.perfect >= 25)
+        
+        if (perfectManager.perfect >= 100) //Si hace el perfect
         {
-            LevelMoney = 20;
-            perfectManager.perfectCounter += perfectManager.perfect;
-            
+            LevelMoney = 80; //Se le da esta plata
         }
+        
+        perfectManager.perfectCounter += perfectManager.perfect; //Suma en un acumulador la score total de perfect.
     }
     public void getMoney()
     {

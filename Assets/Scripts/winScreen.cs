@@ -40,20 +40,23 @@ public class winScreen : MonoBehaviour
             animator.SetBool("winAnimDefFinale", true);
             numberText = numberPrefab.GetComponent<TextMeshProUGUI>();
             numberText.text = economyManager.LevelMoney.ToString();
-            if (perfectManager.perfect >= 100)
+
+            if (perfectManager.perfect >= 25)
             {
                 star1.SetActive(true);
-                star2.SetActive(true);
-                star3.SetActive(true);
             }
+
             if (perfectManager.perfect >= 50)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
             }
-            if (perfectManager.perfect >= 25)
+            
+            if (perfectManager.perfect >= 100)
             {
                 star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(true);
             }
         }
         
