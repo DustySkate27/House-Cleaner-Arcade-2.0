@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.509434, g: 0.21588974, b: 0.0024029962, a: 1}
+  m_Sprite: {fileID: -17865579, guid: b2ea65bef2a52584aaf803ad0261336c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9372549}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   SizeReductionPerSecond: 0.2
   damageTimer: 0
   damageInterval: 1
-  givePerfection: 10
+  givePerfection: 30
   crater: {fileID: 0}
 --- !u!58 &5131587248751750551
 CircleCollider2D:

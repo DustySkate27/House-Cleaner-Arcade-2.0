@@ -10,6 +10,7 @@ public class soundPlayer : MonoBehaviour
     private AudioListener audioListener;
     [SerializeField] private AudioClip buttonSound;
     [SerializeField] private AudioClip shotGun;
+    [SerializeField] private AudioClip buySound;
 
     private void Awake()
     {
@@ -40,8 +41,12 @@ public class soundPlayer : MonoBehaviour
 
     public void playShotGun()
     {
-        AudioListener.volume = 0.3f;
         audioSource.PlayOneShot(shotGun);
         
+    }
+
+    public void playBuyShot()
+    {
+        audioSource.PlayOneShot(buySound);
     }
 }

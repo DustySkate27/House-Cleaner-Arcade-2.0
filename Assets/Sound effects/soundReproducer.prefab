@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonSound: {fileID: 8300000, guid: 6aa236f910fd0ed42bad917526e1a86c, type: 3}
   shotGun: {fileID: 8300000, guid: 38ac63385e920774092c9f653581f36f, type: 3}
+  buySound: {fileID: 8300000, guid: 10de7ac6bc57ac44ea8b2f1cc62d2e86, type: 3}
 --- !u!82 &6807744778675005231
 AudioSource:
   m_ObjectHideFlags: 0

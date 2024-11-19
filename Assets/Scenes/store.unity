@@ -587,6 +587,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542479517}
   m_CullTransparentMesh: 1
+--- !u!1001 &596281412
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1021204747767760056, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_Name
+      value: music
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808646542118304505, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 235.07088
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808646542118304505, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 253.06055
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808646542118304505, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.0817547
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808646542118304505, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808646542118304505, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808646542118304505, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808646542118304505, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808646542118304505, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808646542118304505, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808646542118304505, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
 --- !u!1 &622729851
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +879,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9934c51a91284b847aa44d8b65caf7cc, type: 3}
+--- !u!114 &706257413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4235330827799127530, guid: 9934c51a91284b847aa44d8b65caf7cc, type: 3}
+  m_PrefabInstance: {fileID: 706257412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c60d01d7024983418b5cf65afab9254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &718712877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1286,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 706257413}
+        m_TargetAssemblyTypeName: soundPlayer, Assembly-CSharp
+        m_MethodName: playBuyShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1324385588}
         m_TargetAssemblyTypeName: tienda, Assembly-CSharp
         m_MethodName: silBuyed
@@ -1594,6 +1674,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 706257413}
+        m_TargetAssemblyTypeName: soundPlayer, Assembly-CSharp
+        m_MethodName: playBuyShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1324385588}
         m_TargetAssemblyTypeName: tienda, Assembly-CSharp
         m_MethodName: potBuyed
@@ -2698,3 +2790,4 @@ SceneRoots:
   - {fileID: 437911065}
   - {fileID: 508116916}
   - {fileID: 706257412}
+  - {fileID: 596281412}

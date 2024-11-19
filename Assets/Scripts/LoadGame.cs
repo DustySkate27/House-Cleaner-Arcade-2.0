@@ -39,7 +39,7 @@ public class LoadGame : MonoBehaviour
     {
         soundPlayer.Instance.playButtonSound();
 
-        if (SceneManager.GetActiveScene().name == "win")
+        if (SceneManager.GetActiveScene().name == "Win")
         {
             SceneManager.LoadScene("nivel2");
 
