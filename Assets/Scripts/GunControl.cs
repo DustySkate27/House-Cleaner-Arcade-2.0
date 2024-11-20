@@ -14,6 +14,7 @@ public class GunControl : MonoBehaviour
 
 
     public float WaterTank;
+    [SerializeField] private float MaxWaterTank;
 
     [SerializeField] private Image waterBar;
     
@@ -30,6 +31,8 @@ public class GunControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        MaxWaterTank = WaterTank;
         broomControl = GetComponent<controles>();
         waterPressure1 = true;
 
@@ -41,7 +44,7 @@ public class GunControl : MonoBehaviour
         gun();
         waterPressureKey();
 
-        waterBar.fillAmount = WaterTank / 100;
+        waterBar.fillAmount = WaterTank / MaxWaterTank;
 
         if(Input.GetKeyDown(KeyCode.Tab))
         {

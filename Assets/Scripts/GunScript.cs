@@ -12,6 +12,7 @@ public class GunScript : MonoBehaviour
     [SerializeField] private float waterConsumptionRate;
 
     [SerializeField] private float consumptionTimer;
+    [SerializeField] private float timeConsumption;
 
     [SerializeField] private GunControl gunControl;
 
@@ -40,7 +41,7 @@ public class GunScript : MonoBehaviour
                 consumptionTimer += Time.deltaTime;
 
 
-                if (consumptionTimer >= 1.0f)
+                if (consumptionTimer >= timeConsumption)
                 {
                     gunControl.WaterTank -= 2;
                     consumptionTimer = 0f;
@@ -62,7 +63,7 @@ public class GunScript : MonoBehaviour
                 consumptionTimer += Time.deltaTime;
 
 
-                if (consumptionTimer >= 1.0f)
+                if (consumptionTimer >= timeConsumption)
                 {
                     gunControl.WaterTank -= 5;
                     consumptionTimer = 0f;
@@ -85,7 +86,7 @@ public class GunScript : MonoBehaviour
                 consumptionTimer += Time.deltaTime;
 
 
-                if (consumptionTimer >= 1.0f)
+                if (consumptionTimer >= timeConsumption)
                 {
                     gunControl.WaterTank -= 10;
                     consumptionTimer = 0f;
