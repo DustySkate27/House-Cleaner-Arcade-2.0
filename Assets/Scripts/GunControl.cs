@@ -14,6 +14,7 @@ public class GunControl : MonoBehaviour
 
 
     public float WaterTank;
+    [SerializeField] private float MaxWaterTank;
 
     [SerializeField] private Image waterBar;
     
@@ -32,7 +33,7 @@ public class GunControl : MonoBehaviour
     {
         broomControl = GetComponent<controles>();
         waterPressure1 = true;
-
+        MaxWaterTank = WaterTank;
     }
 
     // Update is called once per frame
@@ -41,7 +42,7 @@ public class GunControl : MonoBehaviour
         gun();
         waterPressureKey();
 
-        waterBar.fillAmount = WaterTank / 100;
+        waterBar.fillAmount = WaterTank / MaxWaterTank;
 
         if(Input.GetKeyDown(KeyCode.Tab))
         {
@@ -131,17 +132,13 @@ public class GunControl : MonoBehaviour
             waterPressure1 = true;
             waterPressure2 = false;
             waterPressure3 = false;
-
-
         }
 
-       if (Input.GetKeyDown("2"))
+        if (Input.GetKeyDown("2"))
         {
             waterPressure2 = true;
             waterPressure1 = false;
             waterPressure3 = false;
-
-
         }
 
 
@@ -150,7 +147,6 @@ public class GunControl : MonoBehaviour
             waterPressure3 = true;
             waterPressure1 = false;
             waterPressure2 = false;
-
         }
 
     }

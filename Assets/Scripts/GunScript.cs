@@ -30,89 +30,68 @@ public class GunScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && gunControl.WaterTank > 0)
         {
-            
+            gunControl.isShooting = true;
 
-            if(gunControl.waterPressure1 == true)
+            consumptionTimer += Time.deltaTime;
+
+            if (gunControl.waterPressure1)
             {
-                water1.SetActive(true);
-                gunControl.isShooting = true;
-
-                consumptionTimer += Time.deltaTime;
-
-
+                ActivateWater(water1);
                 if (consumptionTimer >= 1.0f)
                 {
                     gunControl.WaterTank -= 2;
                     consumptionTimer = 0f;
-
-                    if (gunControl.WaterTank <= 0)
-                    {
-                        gunControl.WaterTank = 0;
-                        water1.SetActive(false);
-                    }
                 }
-
             }
-            else if (gunControl.waterPressure2 == true)
+            else if (gunControl.waterPressure2)
             {
-                water2.SetActive(true);
-                gunControl.isShooting = true;
-
-
-                consumptionTimer += Time.deltaTime;
-
-
+                ActivateWater(water2);
                 if (consumptionTimer >= 1.0f)
                 {
                     gunControl.WaterTank -= 5;
                     consumptionTimer = 0f;
-
-                    if (gunControl.WaterTank <= 0)
-                    {
-                        gunControl.WaterTank = 0;
-                        water2.SetActive(false);
-                    }
                 }
-
-
             }
-            else if (gunControl.waterPressure3 == true)
+            else if (gunControl.waterPressure3)
             {
-                water3.SetActive(true);
-                gunControl.isShooting = true;
-
-
-                consumptionTimer += Time.deltaTime;
-
-
+                ActivateWater(water3);
                 if (consumptionTimer >= 1.0f)
                 {
                     gunControl.WaterTank -= 10;
                     consumptionTimer = 0f;
-
-                    if (gunControl.WaterTank <= 0)
-                    {
-                        gunControl.WaterTank = 0;
-                        water3.SetActive(false);
-                    }
                 }
-
-
             }
 
+            if (gunControl.WaterTank <= 0)
+            {
+                gunControl.WaterTank = 0;
+                DeactivateAllWater();
+            }
         }
         else
         {
-
-            water1.SetActive(false);
-            water2.SetActive(false);
-            water3.SetActive(false);
+            DeactivateAllWater();
             consumptionTimer = 0f;
             gunControl.isShooting = false;
         }
     }
 
+    private void ActivateWater(GameObject activeWater)
+    {
+        water1.SetActive(activeWater == water1);
+        water2.SetActive(activeWater == water2);
+        water3.SetActive(activeWater == water3);
+    }
 
- 
+    private void DeactivateAllWater()
+    {
+        water1.SetActive(false);
+        water2.SetActive(false);
+        water3.SetActive(false);
+    }
+
+
+
+
 }
 
