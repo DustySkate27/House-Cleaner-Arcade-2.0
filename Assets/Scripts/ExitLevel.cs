@@ -77,5 +77,13 @@ public class ExitLevel : MonoBehaviour
             perfectManager.Instance.countStars();
         }
 
+        if (SceneManager.GetActiveScene().name == "nivel5")
+        {
+            SceneManager.LoadScene("win5");
+            economyManager.Instance.calculoDinero();
+            economyManager.Instance.getMoney();
+            perfectManager.Instance.countStars();
+        }
+
     }
 }

@@ -27,7 +27,7 @@ public class winScreen : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        if(SceneManager.GetActiveScene().name == "win4")
+        if(SceneManager.GetActiveScene().name == "win5")
         { 
             animator.SetBool("finale", true);
             starText = starCount.GetComponent<TextMeshProUGUI>();

@@ -84,6 +84,13 @@ public class LoadGame : MonoBehaviour
             economyManager.LevelMoney = 0;
 
         }
+        if (SceneManager.GetActiveScene().name == "win4")
+        {
+            SceneManager.LoadScene("nivel5");
+
+            perfectManager.perfect = 0;
+            economyManager.LevelMoney = 0;
+        }
 
     }
 }

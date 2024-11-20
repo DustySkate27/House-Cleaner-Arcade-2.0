@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 6877e47f72e895246ad6fcfb5b112640
   - enabled: 1
     path: Assets/Scenes/win.unity
-    guid: 911b2c3c654f0444b80561bb0d70b867
+    guid: ea170912725bc564faf923a18b385080
   - enabled: 1
     path: Assets/Scenes/nivel2.unity
     guid: 7e1dc389ee4a25c4486c36092dc866bf
@@ -34,5 +34,11 @@ EditorBuildSettings:
     guid: f0decfea8ce95d643be4ed932cf911a7
   - enabled: 1
     path: Assets/Scenes/win4.unity
+    guid: b9f97a4edd8b87d40b07e942aa506872
+  - enabled: 1
+    path: Assets/Scenes/nivel5.unity
+    guid: b12212de8dda6e741b25894a2ed01196
+  - enabled: 1
+    path: Assets/Scenes/win5.unity
     guid: f4bdcb66e0dbe5c4d8a1a5393216e3b6
   m_configObjects: {}
