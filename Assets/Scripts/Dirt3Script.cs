@@ -47,7 +47,7 @@ public class Dirt3Script : MonoBehaviour
                 if (Health <= 0)
                 {
                     perfectManager.perfect += givePerfection;
-                    Destroy(gameObject);
+                    gameObject.SetActive(false);
                 }
             }
         }

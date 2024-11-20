@@ -47,7 +47,7 @@ public class Dirt2Script : MonoBehaviour
                 if (Health <= 0)
                 {
                     perfectManager.perfect += givePerfection;
-                    Destroy(gameObject);
+                    gameObject.SetActive(false);
                 }
             }
         }
@@ -64,7 +64,7 @@ public class Dirt2Script : MonoBehaviour
         {
             crater.SetActive(true);
             perfectManager.perfect -= 10;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

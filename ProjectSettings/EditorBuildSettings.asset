@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/nivel1.unity
     guid: 6877e47f72e895246ad6fcfb5b112640
   - enabled: 1
-    path: Assets/Scenes/win.unity
+    path: Assets/Scenes/Win.unity
     guid: ea170912725bc564faf923a18b385080
   - enabled: 1
     path: Assets/Scenes/nivel2.unity

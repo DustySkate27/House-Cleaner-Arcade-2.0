@@ -43,8 +43,8 @@ public class tienda : MonoBehaviour
     {
         textPan.SetActive(true);
         price.SetActive(true);
-        priceText.text = "50";
-        descText.text = "The Red Scream: Use this and all the dogs will be gone by the time they hear it. Be aware! The sound destroys the device (And sometimes the user)";
+        priceText.text = "500";
+        descText.text = "[Press 'R' to use] The Red Scream: Use this and all the dogs will be gone by the time they hear it. Be aware! The sound destroys the device (And sometimes the user)";
     }
 
     public void OffHighlightSil()
@@ -59,8 +59,8 @@ public class tienda : MonoBehaviour
     {
         textPan.SetActive(true);
         price.SetActive(true);
-        priceText.text = "100";
-        descText.text = "The Solving Potion: I'm not sure what this does, but it must have something to do with fixing something... At least I think so.";
+        priceText.text = "180";
+        descText.text = "[Press 'I' to use] The Solving Potion: I'm not sure what this does, but it must have something to do with fixing something... At least I think so.";
     }
 
     public void OffHighlightPot()
@@ -73,10 +73,10 @@ public class tienda : MonoBehaviour
 
     public void silBuyed()
     {
-        if (itemManager.Instance.sBuy == false && economyManager.playerMoney >= 50)
+        if (itemManager.Instance.sBuy == false && economyManager.playerMoney >= 500)
         {
             itemManager.Instance.sBuy = true;
-            economyManager.playerMoney-=50;
+            economyManager.playerMoney-=500;
             silAct.gameObject.SetActive(false);
             silInact.gameObject.SetActive(true);
             textPan.SetActive(false);
@@ -88,10 +88,10 @@ public class tienda : MonoBehaviour
 
     public void potBuyed()
     {
-        if (itemManager.Instance.pBuy == false && economyManager.playerMoney >= 100)
+        if (itemManager.Instance.pBuy == false && economyManager.playerMoney >= 180)
         {
             itemManager.Instance.pBuy = true;
-            economyManager.playerMoney -= 100;
+            economyManager.playerMoney -= 180;
             potAct.gameObject.SetActive(false);
             potInact.gameObject.SetActive(true);
             textPan.SetActive(false);
